@@ -34,7 +34,7 @@ h1 {
   border-bottom: 0;
 }
 
-input:checked + p {
+input:checked+p {
   text-decoration: line-through;
   text-decoration-color: #a683e3;
 }
@@ -49,6 +49,7 @@ p {
   font-size: 20px;
   font-weight: 200;
   color: #00204a;
+  font-family: inherit;
 }
 
 form {
