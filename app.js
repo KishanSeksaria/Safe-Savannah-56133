@@ -193,8 +193,12 @@ app.post("/delete", (req, res) => {
     res.redirect("/" + currentListName);
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+}
 
 // listening on default port 80 for running our server
-app.listen(process.env.PORT || 80, () => {
+app.listen(port, () => {
     console.log("Server up and running.");
 });
