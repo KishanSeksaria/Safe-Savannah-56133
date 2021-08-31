@@ -195,6 +195,6 @@ app.post("/delete", (req, res) => {
 
 
 // listening on default port 80 for running our server
-app.listen(80, () => {
+app.listen(process.env.PORT || 80, () => {
     console.log("Server up and running.");
 });
