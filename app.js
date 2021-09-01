@@ -1,7 +1,7 @@
+require('dotenv').config();
+
 // getting hold of express module for our project
 const express = require("express");
-
-const mongoAdminPassword = require(__dirname + "/keys.js");
 
 // getting hold of the lodash module for our project
 const _ = require("lodash");
@@ -26,7 +26,7 @@ app.use(express.urlencoded({
 // specifying to express that we want to serve the static files inside the public folder to the server too
 app.use(express.static("public"));
 
-const mongoAtlasLink = "mongodb+srv://admin-kishan:" + mongoAdminPassword + "@todo-list-db.jajhw.mongodb.net/todolistDB";
+const mongoAtlasLink = "mongodb+srv://admin-kishan:" + process.env.ATLAS_KEY + "@todo-list-db.jajhw.mongodb.net/todolistDB";
 
 // connecting to local mongoDB server
 mongoose.connect(mongoAtlasLink, {
